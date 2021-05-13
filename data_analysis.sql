@@ -1,29 +1,99 @@
-/* Number of scheduled departures and arrivals by airport on the current date */
+-- Scheduled departures and arrivals by airport for today
 SELECT airport, COUNT(*)
 FROM flight
 
 
-/* Number of flights by status (active, scheduled or cancelled) */
+-- Flights by airline and status (active, scheduled or cancelled)
+SELECT airline_name, flight_status, COUNT(flight_id) AS flights
+FROM flight
+GROUP BY airline_name, flight_status
+ORDER BY COUNT(flight_id) DESC, airline_name
+
+-- Airlines with two or more flights scheduled for this month
+SELECT airline_name, COUNT(flight_id) AS flights
+FROM flight
+WHERE DATE_FORMAT(flight_date,'%Y-%m') = date_format(NOW(),'%Y-%m')
+GROUP BY airline_name
+HAVING COUNT(flight_id) > 1
+ORDER BY COUNT(flight_id) DESC, airline_name
+
+-- Top five cities with most flights per day this month
 
 
-/* Airlines with two or more flights scheduled for the current month */
+-- Top ten airlines with most cancelled flights per month this year
 
 
-/* Number of arrivals and departures per month in the current year */
+-- Airlines with no flights scheduled for today
+SELECT airline.airline_name
+FROM airline
+LEFT JOIN (
+	SELECT *
+	FROM flight
+	WHERE flight_date = date_format(NOW(),'%Y-%m-%d')) AS flight_today
+ON airline.icao_code = flight_today.airline_icao
+WHERE flight_today.airline_icao IS NULL
+ORDER BY airline.airline_name
 
+-- Active airlines founded before 1950
+SELECT airline_name, date_founded
+FROM airline
+WHERE date_founded <= 1950
+ORDER BY date_founded ASC
 
-/* Top five cities with most flights per day in the current month*/
+-- Create historical flights table and insert today's records
+CREATE TABLE historical_flight
+AS
+SELECT *
+FROM flight
+WHERE 1 = 0
 
+*/
+DELIMITER //
+    CREATE PROCEDURE historical_flight()
+    BEGIN
+        INSERT INTO historical_flight (
+            flight_id,
+            flight_date,
+            flight_status,
+            departure_airport,
+            departure_timezone,
+            departure_iata,
+            departure_icao,
+            departure_terminal,
+            departure_gate,
+            departure_delay,
+            departure_scheduled,
+            departure_estimated,
+            departure_actual,
+            departure_estimated_runway,
+            departure_actual_runway,
+            arrival_airport,
+            arrival_timezone,
+            arrival_iata,
+            arrival_icao,
+            arrival_terminal,
+            arrival_gate,
+            arrival_baggage,
+            arrival_delay,
+            arrival_scheduled,
+            arrival_estimated,
+            arrival_actual,
+            arrival_estimated_runway,
+            arrival_actual_runway,
+            airline_name, 
+            airline_iata,
+            airline_icao,
+            flight_number,
+            flight_iata,
+            flight_icao )
+        SELECT *
+        FROM flight
+        WHERE flight_date = date_format(NOW(),'%Y-%m-%d')); 
+    END;
+   //
+DELIMITER
 
-/* Top ten airlines with most cancelled flights per month in the current year */
-
-
-/* Store procedure to upload flights and status by the end of the day to a history table */
-
-
-/* Airlines with no flights scheduled for today */
-
-
+-- Total arrivals and departures from US by month this year
 
 
 /*Por día se necesita, cantidad de ventas realizadas, cantidad de productos vendidos y monto total
