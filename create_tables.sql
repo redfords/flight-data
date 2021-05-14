@@ -5,11 +5,10 @@ DROP TABLE if EXISTS city;
 DROP TABLE if EXISTS country;
 
 CREATE TABLE country (
-	country_id INT,
 	capital VARCHAR(20),
 	currency_code CHAR(3),
 	fips_code CHAR(2),
-	country_iso2 CHAR(2),
+	country_iso2 CHAR(2) NOT NULL,
     country_iso3 CHAR(3),
     continent CHAR(2),
 	country_name VARCHAR(60),
@@ -21,25 +20,23 @@ CREATE TABLE country (
 );
 
 CREATE TABLE city (
-	city_id INT,
 	gmt INT,
-	iata_code CHAR(3),
+	iata_code CHAR(3) NOT NULL,
 	country_iso2 CHAR(2),
 	geoname_id INT,
 	latitude VARCHAR(20),
 	longitude VARCHAR(20),
 	city_name VARCHAR(30),
 	timezone VARCHAR(40),
-	PRIMARY KEY (iata_code),
-	FOREIGN KEY (country_iso2) REFERENCES country(country_iso2)
+	PRIMARY KEY (iata_code)
+	--FOREIGN KEY (country_iso2) REFERENCES country(country_iso2)
 );
 
 CREATE TABLE airport (
-	airport_id INT,
 	gmt INT,
 	iata_code CHAR(3),
 	city_iata_code CHAR(3),
-	icao_code CHAR(4),
+	icao_code CHAR(4) NOT NULL,
 	country_iso2 CHAR(2),
 	geoname_id VARCHAR(8),
 	latitude VARCHAR(20),
@@ -48,12 +45,11 @@ CREATE TABLE airport (
 	country_name VARCHAR(60),
 	phone_number VARCHAR(50),
 	timezone VARCHAR(40),
-	PRIMARY KEY (icao_code),
-	FOREIGN KEY (city_iata_code) REFERENCES city(iata_code)
+	PRIMARY KEY (icao_code)
+	--FOREIGN KEY (city_iata_code) REFERENCES city(iata_code)
 );
 
 CREATE TABLE airline (
-	airline_id INT,
 	fleet_average_age FLOAT,
 	callsign VARCHAR(30),
 	hub_code CHAR(3),
@@ -62,17 +58,16 @@ CREATE TABLE airline (
 	country_iso2 CHAR(2),
 	date_founded INT,
 	iata_prefix_accounting INT,
-	airline_name VARCHAR(60),
+	airline_name VARCHAR(60) NOT NULL,
 	country_name VARCHAR(60),
 	fleet_size INT,
 	STATUS VARCHAR(7),
 	TYPE VARCHAR(20),
-	PRIMARY KEY (airline_name),
-	FOREIGN KEY (country_iso2) REFERENCES country(country_iso2)
+	PRIMARY KEY (airline_name)
 );
 
 CREATE TABLE flight (
-    flight_id INT,
+    flight_id INT NOT NULL,
     flight_date DATE,
     flight_status VARCHAR(10),
     departure_airport VARCHAR(100),
@@ -101,13 +96,13 @@ CREATE TABLE flight (
     arrival_estimated_runway DATETIME,
     arrival_actual_runway DATETIME,
     airline_name VARCHAR(60), 
-    airline_iata CHAR(2),
+    airline_iata CHAR(3),
     airline_icao CHAR(3),
     flight_number VARCHAR(5),
     flight_iata VARCHAR(7),
     flight_icao VARCHAR(8),
-    PRIMARY KEY (flight_id),
-	FOREIGN KEY (departure_icao) REFERENCES airport(icao_code),
-    FOREIGN KEY (arrival_icao) REFERENCES airport(icao_code),
-    FOREIGN KEY (airline_name) REFERENCES airline(airline_name)
+    PRIMARY KEY (flight_id)
+	--FOREIGN KEY (departure_icao) REFERENCES airport(icao_code),
+    --FOREIGN KEY (arrival_icao) REFERENCES airport(icao_code),
+    --FOREIGN KEY (airline_name) REFERENCES airline(airline_name)
 )
