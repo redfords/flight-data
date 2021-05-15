@@ -1,3 +1,9 @@
+-- Flights by airline and status (active, scheduled or cancelled)
+SELECT airline_name, flight_status, COUNT(flight_id) AS flights
+FROM flight
+GROUP BY airline_name, flight_status
+ORDER BY COUNT(flight_id) DESC, airline_name
+
 -- Scheduled departures and arrivals by airport for today
 SELECT airport.airport_name,
     COUNT(departure.flight_id) AS departures,
@@ -16,12 +22,6 @@ ON arrival.arrival_icao = airport.icao_code
 GROUP BY airport.airport_name
 HAVING departures > 0 OR arrivals > 0
 ORDER BY airport_name
-
--- Flights by airline and status (active, scheduled or cancelled)
-SELECT airline_name, flight_status, COUNT(flight_id) AS flights
-FROM flight
-GROUP BY airline_name, flight_status
-ORDER BY COUNT(flight_id) DESC, airline_name
 
 -- Airlines with two or more flights scheduled for this month
 SELECT airline_name, COUNT(flight_id) AS flights
@@ -131,6 +131,19 @@ DELIMITER //
    //
 DELIMITER
 
+--US airline categories by fleet size: large hub 400 or more aircrafts
+--medium hub between 100 and 400 aircrafts, small hub less than 100 aircrafts
+SELECT airline_name, fleet_size,
+CASE
+	WHEN fleet_size > 400 THEN 'Large Hub'
+	WHEN fleet_size > 100 THEN 'Medium Hub'
+	ELSE 'Small Hub'
+END AS category
+FROM airline
+WHERE country_iso2 = 'US' AND
+STATUS = 'active'
+ORDER BY fleet_size DESC
+
 -- Total flights from US by month this year
 SELECT date_format(departure_scheduled,'%Y-%m') AS MONTH,
 	COUNT(flight_id) AS departures
@@ -140,3 +153,4 @@ ON airport.icao_code = flight.departure_icao
 WHERE date_format(departure_scheduled,'%Y') = date_format(NOW(),'%Y') AND
     country_iso2 = 'US'
 GROUP BY date_format(departure_scheduled,'%Y-%m')
+
