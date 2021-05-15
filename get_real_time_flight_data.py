@@ -21,6 +21,10 @@ def convert_json(list_of_dict):
 
     return items
 
+def convert_datetime(column_name):
+    real_time_flights[column_name] = pd.to_datetime(
+        real_time_flights[column_name]).dt.tz_convert(None)
+
 # extract real time flights data
 access_key = "510c0e5f6d29bf5e1701266de1280e06"
 
@@ -33,36 +37,23 @@ data = convert_json(data)
 real_time_flights = pd.DataFrame(data)
 real_time_flights = real_time_flights.iloc[:, 0:33]
 
+# list of columns to correct
+column_name = [
+    'departure_scheduled',
+    'departure_estimated',
+    'departure_actual',
+    'departure_estimated_runway',
+    'departure_actual_runway',
+    'arrival_scheduled',
+    'arrival_estimated',
+    'arrival_actual',
+    'arrival_estimated_runway',
+    'arrival_actual_runway'
+]
+
 # convert RFC3339 (ISO8601) to datetime
-real_time_flights['departure_scheduled'] = pd.to_datetime(
-    real_time_flights['departure_scheduled']).dt.tz_convert(None)
-
-real_time_flights['departure_estimated'] = pd.to_datetime(
-    real_time_flights['departure_estimated']).dt.tz_convert(None)
-
-real_time_flights['departure_actual'] = pd.to_datetime(
-    real_time_flights['departure_actual']).dt.tz_convert(None)
-
-real_time_flights['departure_estimated_runway'] = pd.to_datetime(
-    real_time_flights['departure_estimated_runway']).dt.tz_convert(None)
-
-real_time_flights['departure_actual_runway'] = pd.to_datetime(
-    real_time_flights['departure_actual_runway']).dt.tz_convert(None)
-
-real_time_flights['arrival_scheduled'] = pd.to_datetime(
-    real_time_flights['arrival_scheduled']).dt.tz_convert(None)
-
-real_time_flights['arrival_estimated'] = pd.to_datetime(
-    real_time_flights['arrival_estimated']).dt.tz_convert(None)
-
-real_time_flights['arrival_actual'] = pd.to_datetime(
-    real_time_flights['arrival_actual']).dt.tz_convert(None)
-
-real_time_flights['arrival_estimated_runway'] = pd.to_datetime(
-    real_time_flights['arrival_estimated_runway']).dt.tz_convert(None)
-
-real_time_flights['arrival_actual_runway'] = pd.to_datetime(
-    real_time_flights['arrival_actual_runway']).dt.tz_convert(None)
+for column in column_name:
+    convert_datetime(column)
 
 # load data into csv
 real_time_flights.to_csv('flight.csv')

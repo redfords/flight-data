@@ -13,27 +13,23 @@ def extract_from_csv(file_to_process):
 
 print("Uploading into database...")
 
-# insert country data into MySQL
-data = extract_from_csv('country.csv')
-data = data.iloc[:, 1:]
-data.to_sql('country', con = engine, if_exists = 'append', index = False, chunksize = 100)
+# insert CSV files into DB
+def insert_into_db(table_name, index):
+    data = extract_from_csv(table_name + '.csv')
+    data = data.iloc[:, 1:]
 
-# insert city data into MySQL
-data = extract_from_csv('city.csv')
-data = data.iloc[:, 1:]
-data.to_sql('city', con = engine, if_exists = 'append', index = False, chunksize = 100)
+    if index == False:
+        data.to_sql(table_name, con = engine, if_exists = 'append', index = False)
+    else:
+        data.to_sql(table_name, con = engine, if_exists = 'append', index_label = table_name + '_id')
 
-# insert airport data into MySQL
-data = extract_from_csv('airport.csv')
-data = data.iloc[:, 1:]
-data.to_sql('airport', con = engine, if_exists = 'append', index = False, chunksize = 100)
+tables_to_insert = {
+    'country': False,
+    'city': False,
+    'airport': False,
+    'airline': False,
+    'flight': True
+}
 
-# insert airline data into MySQL
-data = extract_from_csv('airline.csv')
-data = data.iloc[:, 1:]
-data.to_sql('airline', con = engine, if_exists = 'append', index = False, chunksize = 100)
-
-# insert flight data into MySQL
-data = extract_from_csv('flight.csv')
-data = data.iloc[:, 1:]
-data.to_sql('flight', con = engine, if_exists = 'append', index_label = 'flight_id', chunksize = 100)
+for key, value in tables_to_insert.items():
+    insert_into_db(key, value)
