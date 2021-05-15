@@ -56,7 +56,7 @@ CREATE TABLE airline (
 	iata_code CHAR(2),
 	icao_code CHAR(3),
 	country_iso2 CHAR(2),
-	date_founded INT,
+	date_founded YEAR,
 	iata_prefix_accounting INT,
 	airline_name VARCHAR(60) NOT NULL,
 	country_name VARCHAR(60),
