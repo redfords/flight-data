@@ -1,0 +1,101 @@
+,gmt,iata_code,country_iso2,geoname_id,latitude,longitude,city_name,timezone
+0,-10,AAA,PF,,-17.05,-145.41667,Anaa,Pacific/Tahiti
+1,10,AAB,AU,,-26.7,141.04167,Arrabury,Australia/Brisbane
+2,2,AAC,EG,361546,31.133333,33.75,El Arish,Africa/Cairo
+3,1,AAE,DZ,2506999,36.821392,7.811857,Annaba,Africa/Algiers
+4,-6,AAF,US,4167695,29.733334,-84.98333,Apalachicola,America/Chicago
+5,-3,AAG,BR,3471795,-24.103611,-49.79,Arapoti,America/Sao_Paulo
+6,1,AAH,DE,3247449,50.775438,6.08151,Aachen,Europe/Berlin
+7,-3,AAI,BR,,-12.916667,-46.933334,Arraias,America/Araguaina
+8,-3,AAJ,SR,,3.9,-55.36667,Awaradam,America/Paramaribo
+9,12,AAK,KI,,0.166667,173.58333,Aranuka,Pacific/Tarawa
+10,1,AAL,DK,2624886,57.028811,9.917771,Aalborg,Europe/Copenhagen
+11,2,AAM,ZA,954955,-24.8,31.533333,Mala Mala,Africa/Johannesburg
+12,4,AAN,AE,292913,24.2075,55.744722,Al Ain,Asia/Dubai
+13,-4,AAO,VE,3486270,9.431944,-64.46389,Anaco,America/Caracas
+14,3,AAQ,RU,582182,44.9,37.316666,Anapa,Europe/Moscow
+15,1,AAR,DK,2611664,56.162939,10.203921,Aarhus,Europe/Copenhagen
+16,9,AAS,ID,,-3.916667,139.25,Apalapsili,Asia/Jayapura
+17,8,AAT,CN,1529651,47.750362,88.08444,Altay,Asia/Shanghai
+18,13,AAU,WS,4035092,-13.458333,-172.6,Asau,Pacific/Apia
+19,8,AAV,PH,,6.333333,124.76667,Surallah,Asia/Manila
+20,5,AAW,PK,,34.2,73.25,Abbottabad,Asia/Karachi
+21,-3,AAX,BR,3471691,-19.568056,-46.92917,Araxa,America/Sao_Paulo
+22,3,AAY,YE,,16.19596,52.173256,Al Ghaydah,Asia/Aden
+23,-6,AAZ,GT,3599699,14.87,-91.5,Quetzaltenango,America/Guatemala
+24,7,ABA,RU,1512236,53.716667,91.5,Abakan,Asia/Krasnoyarsk
+25,,ABB,NG,2640729,51.666668,-1.283333,Asaba,Europe/London
+26,1,ABC,ES,2522258,38.997652,-1.86007,Albacete,Europe/Madrid
+27,3.30,ABD,IR,,30.363905,48.226597,Abadan,Asia/Tehran
+28,-5,ABE,US,5178127,40.651573,-75.434364,Allentown,America/New_York
+29,12,ABF,KI,,1.670833,173.30417,Abaiang,Pacific/Tarawa
+30,10,ABG,AU,,-17.666668,143.2,Abingdon,Australia/Brisbane
+31,10,ABH,AU,,-23.65,146.63333,Alpha,Australia/Brisbane
+32,-6,ABI,US,4669635,32.448736,-99.733144,Abilene,America/Chicago
+33,,ABJ,CI,2293538,5.254879,-3.933015,Abidjan,Africa/Abidjan
+34,3,ABK,ET,,6.733889,44.26611,Kabri Dar,Africa/Addis_Ababa
+35,-9,ABL,US,,67.0875,-157.84584,Ambler,America/Anchorage
+36,10,ABM,AU,2177023,-10.942619,142.45033,Bamaga,Australia/Brisbane
+37,-3,ABN,SR,3384792,5.5,-54.083332,Albina,America/Paramaribo
+38,,ABO,CI,,5.433333,-3.216667,Aboisso,Africa/Abidjan
+39,10,ABP,PG,,-6.066667,141.1,Atkamba,Pacific/Port_Moresby
+40,-7,ABQ,US,5454711,35.049625,-106.617195,Albuquerque,America/Denver
+41,-6,ABR,US,5225857,45.4525,-98.42611,Aberdeen,America/Chicago
+42,2,ABS,EG,362041,22.367567,31.609774,Abu Simbel,Africa/Cairo
+43,3,ABT,SA,,20.29401,41.64002,Al-Baha,Asia/Riyadh
+44,8,ABU,ID,,-9.133333,124.88333,Atambua,Asia/Makassar
+45,1,ABV,NG,,9.004614,7.270447,Abuja,Africa/Lagos
+46,10,ABW,PG,,-10.183333,148.7,Abau,Pacific/Port_Moresby
+47,10,ABX,AU,2178174,-36.069626,146.95453,Albury,Australia/Sydney
+48,-5,ABY,US,4179320,31.578507,-84.155741,Albany,America/New_York
+49,,ABZ,GB,2657832,57.147492,-2.095397,Aberdeen,Europe/London
+50,-6,ACA,MX,3533462,16.762403,-99.75459,Acapulco,America/Mexico_City
+51,-5,ACB,US,4985583,44.983334,-85.21667,Bellaire,America/Detroit
+52,,ACC,GH,2306104,5.60737,-0.171769,Accra,Africa/Accra
+53,-5,ACD,CO,3665580,8.516667,-77.3,Acandi,America/Bogota
+54,,ACE,ES,6355013,28.950668,-13.609059,Arrecife,Atlantic/Canary
+55,1,ACH,CH,2661775,47.483334,9.566667,Altenrhein,Europe/Zurich
+56,,ACI,GG,6692041,49.709347,-2.215369,Alderney,Europe/London
+57,5.30,ACJ,LK,1251081,8.35,80.38333,Anuradhapura,Asia/Colombo
+58,-5,ACK,US,4944903,41.256668,-70.05972,Nantucket,America/New_York
+59,-5,ACL,CO,,4.75,-73,Aguaclara,America/Bogota
+60,-5,ACM,CO,,-2,-71.833336,Arica,America/Bogota
+61,-6,ACN,MX,3992619,29.3,-100.916664,Acuna,America/Matamoros
+62,3.30,ACP,IR,,37.347244,46.145115,Sahand,Asia/Tehran
+63,-5,ACR,CO,,-0.383333,-72.3,Araracuara,America/Bogota
+64,7,ACS,RU,,56.266666,90.566666,Achinsk,Asia/Krasnoyarsk
+65,-6,ACT,US,4739526,31.549333,-97.14667,Waco,America/Chicago
+66,-5,ACU,PA,,9.576389,-79.72444,Achutupo,America/Panama
+67,-8,ACV,US,5558953,40.970913,-124.106926,Arcata,America/Los_Angeles
+68,8,ACX,CN,,25.085556,104.95944,Xingyi,Asia/Shanghai
+69,3.30,ACZ,IR,,31.087694,61.542244,Zabol,Asia/Tehran
+70,3,ADA,TR,325363,37,35.321333,Adana,Europe/Istanbul
+71,10,ADC,PG,2100827,-7.133333,145.73334,Andakombe,Pacific/Port_Moresby
+72,3,ADD,ET,344979,8.983759,38.7959,Addis Ababa,Africa/Addis_Ababa
+73,3,ADE,YE,415189,12.826116,45.037537,Aden,Asia/Aden
+74,3,ADF,TR,325330,37.75,38.266666,Adiyaman,Europe/Istanbul
+75,-5,ADG,US,4917712,41.9,-84.03333,Adrian,America/Indiana/Indianapolis
+76,9,ADH,RU,,58.6,125.4,Aldan,Asia/Yakutsk
+77,2,ADI,NA,3352844,-22.4,15,Arandis,Africa/Windhoek
+78,-10,ADK,US,,51.88278,-176.64473,Adak Island,America/Adak
+79,9.30,ADL,AU,2078025,-34.928621,138.599959,Adelaide,Australia/Adelaide
+80,-6,ADM,US,4529469,34.303055,-97.01945,Ardmore,America/Chicago
+81,-5,ADN,CO,3674962,5.666667,-75.933334,Andes,America/Bogota
+82,9.30,ADO,AU,,-31.016666,137.15,Andamooka,Australia/Adelaide
+83,5.30,ADP,LK,1251081,7.336389,81.625275,Ampara,Asia/Colombo
+84,-9,ADQ,US,5866583,57.79,-152.407222,Kodiak,America/Anchorage
+85,-5,ADR,US,4588718,33.45,-79.566666,Andrews,America/New_York
+86,-6,ADT,US,4529096,34.8,-96.666664,Ada,America/Chicago
+87,3.30,ADU,IR,,38.323826,48.42125,Ardabil,Asia/Tehran
+88,-5,ADW,US,,38.816666,-76.86667,Camp Springs,America/New_York
+89,,ADX,GB,2644581,56.36667,-2.866667,St Andrews,Europe/London
+90,2,ADY,ZA,981827,-22.666668,29.05,Alldays,Africa/Johannesburg
+91,-5,ADZ,CO,3670218,12.586047,-81.70221,San Andres Island,America/Bogota
+92,12,AEA,KI,,0.483333,173.85,Abemama Atoll,Pacific/Tarawa
+93,8,AEB,CN,1794330,23.71947,106.96777,Baise,Asia/Shanghai
+94,-9,AED,US,5879155,58.033333,-152.9,Aleneva,America/Anchorage
+95,3,AEE,SS,,10.05667,32.96096,Adareil,Africa/Juba
+96,7,AEG,ID,1214618,1.399722,99.416664,Aek Godang,Asia/Jakarta
+97,1,AEH,TD,,13.851389,20.850834,Abeche,Africa/Ndjamena
+98,1,AEI,ES,2522013,36.1289,-5.441301,Algeciras,Europe/Madrid
+99,10,AEK,PG,2100468,-7.366667,146.28334,Aseki,Pacific/Port_Moresby

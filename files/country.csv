@@ -1,0 +1,101 @@
+,capital,currency_code,fips_code,country_iso2,country_iso3,continent,country_name,currency_name,country_iso_numeric,phone_prefix,population
+0,Andorra la Vella,EUR,AN,AD,AND,EU,Andorra,Euro,20,376,84000
+1,Abu Dhabi,AED,AE,AE,ARE,AS,United Arab Emirates,Dirham,784,971,4975593
+2,Kabul,AFN,AF,AF,AFG,AS,Afghanistan,Afghani,4,93,29121286
+3,St. John's,XCD,AC,AG,ATG,NA,Antigua and Barbuda,Dollar,28,+1-268,86754
+4,The Valley,XCD,AV,AI,AIA,NA,Anguilla,Dollar,660,+1-264,13254
+5,Tirana,ALL,AL,AL,ALB,EU,Albania,Lek,8,355,2986952
+6,Yerevan,AMD,AM,AM,ARM,AS,Armenia,Dram,51,374,2968000
+7,Willemstad,ANG,NT,AN,ANT,NA,Netherlands Antilles,Guilder,530,599,136197
+8,Luanda,AOA,AO,AO,AGO,AF,Angola,Kwanza,24,244,13068161
+9,,,AY,AQ,ATA,AN,Antarctica,,10,,
+10,Buenos Aires,ARS,AR,AR,ARG,SA,Argentina,Peso,32,54,41343201
+11,Pago Pago,USD,AQ,AS,ASM,OC,American Samoa,Dollar,16,+1-684,57881
+12,Vienna,EUR,AU,AT,AUT,EU,Austria,Euro,40,43,8205000
+13,Canberra,AUD,AS,AU,AUS,OC,Australia,Dollar,36,61,21515754
+14,Oranjestad,AWG,AA,AW,ABW,NA,Aruba,Guilder,533,297,71566
+15,Mariehamn,EUR,,AX,ALA,EU,Aland Islands,Euro,248,+358-18,26711
+16,Baku,AZN,AJ,AZ,AZE,AS,Azerbaijan,Manat,31,994,8303512
+17,Sarajevo,BAM,BK,BA,BIH,EU,Bosnia and Herzegovina,Marka,70,387,4590000
+18,Bridgetown,BBD,BB,BB,BRB,NA,Barbados,Dollar,52,+1-246,285653
+19,Dhaka,BDT,BG,BD,BGD,AS,Bangladesh,Taka,50,880,156118464
+20,Brussels,EUR,BE,BE,BEL,EU,Belgium,Euro,56,32,10403000
+21,Ouagadougou,XOF,UV,BF,BFA,AF,Burkina Faso,Franc,854,226,16241811
+22,Sofia,BGN,BU,BG,BGR,EU,Bulgaria,Lev,100,359,7148785
+23,Manama,BHD,BA,BH,BHR,AS,Bahrain,Dinar,48,973,738004
+24,Bujumbura,BIF,BY,BI,BDI,AF,Burundi,Franc,108,257,9863117
+25,Porto-Novo,XOF,BN,BJ,BEN,AF,Benin,Franc,204,229,9056010
+26,Gustavia,EUR,TB,BL,BLM,NA,Saint BarthÃ©lemy,Euro,652,590,8450
+27,Hamilton,BMD,BD,BM,BMU,NA,Bermuda,Dollar,60,+1-441,65365
+28,Bandar Seri Begawan,BND,BX,BN,BRN,AS,Brunei,Dollar,96,673,395027
+29,Sucre,BOB,BL,BO,BOL,SA,Bolivia,Boliviano,68,591,9947418
+30,,USD,,BQ,BES,NA,"Bonaire, Saint Eustatius and Saba ",Dollar,535,599,18012
+31,Brasilia,BRL,BR,BR,BRA,SA,Brazil,Real,76,55,201103330
+32,Nassau,BSD,BF,BS,BHS,NA,Bahamas,Dollar,44,+1-242,301790
+33,Thimphu,BTN,BT,BT,BTN,AS,Bhutan,Ngultrum,64,975,699847
+34,,NOK,BV,BV,BVT,AN,Bouvet Island,Krone,74,,
+35,Gaborone,BWP,BC,BW,BWA,AF,Botswana,Pula,72,267,2029307
+36,Minsk,BYR,BO,BY,BLR,EU,Belarus,Ruble,112,375,9685000
+37,Belmopan,BZD,BH,BZ,BLZ,NA,Belize,Dollar,84,501,314522
+38,Ottawa,CAD,CA,CA,CAN,NA,Canada,Dollar,124,1,33679000
+39,West Island,AUD,CK,CC,CCK,AS,Cocos Islands,Dollar,166,61,628
+40,Kinshasa,CDF,CG,CD,COD,AF,Democratic Republic of the Congo,Franc,180,243,70916439
+41,Bangui,XAF,CT,CF,CAF,AF,Central African Republic,Franc,140,236,4844927
+42,Brazzaville,XAF,CF,CG,COG,AF,Republic of the Congo,Franc,178,242,3039126
+43,Berne,CHF,SZ,CH,CHE,EU,Switzerland,Franc,756,41,7581000
+44,Yamoussoukro,XOF,IV,CI,CIV,AF,Ivory Coast,Franc,384,225,21058798
+45,Avarua,NZD,CW,CK,COK,OC,Cook Islands,Dollar,184,682,21388
+46,Santiago,CLP,CI,CL,CHL,SA,Chile,Peso,152,56,16746491
+47,Yaounde,XAF,CM,CM,CMR,AF,Cameroon,Franc,120,237,19294149
+48,Beijing,CNY,CH,CN,CHN,AS,China,Yuan Renminbi,156,86,1330044000
+49,Bogota,COP,CO,CO,COL,SA,Colombia,Peso,170,57,44205293
+50,San Jose,CRC,CS,CR,CRI,NA,Costa Rica,Colon,188,506,4516220
+51,Belgrade,RSD,YI,CS,SCG,EU,Serbia and Montenegro,Dinar,891,381,10829175
+52,Havana,CUP,CU,CU,CUB,NA,Cuba,Peso,192,53,11423000
+53,Praia,CVE,CV,CV,CPV,AF,Cape Verde,Escudo,132,238,508659
+54, Willemstad,ANG,UC,CW,CUW,NA,CuraÃ§ao,Guilder,531,599,141766
+55,Flying Fish Cove,AUD,KT,CX,CXR,AS,Christmas Island,Dollar,162,61,1500
+56,Nicosia,EUR,CY,CY,CYP,EU,Cyprus,Euro,196,357,1102677
+57,Prague,CZK,EZ,CZ,CZE,EU,Czech Republic,Koruna,203,420,10476000
+58,Berlin,EUR,GM,DE,DEU,EU,Germany,Euro,276,49,81802257
+59,Djibouti,DJF,DJ,DJ,DJI,AF,Djibouti,Franc,262,253,740528
+60,Copenhagen,DKK,DA,DK,DNK,EU,Denmark,Krone,208,45,5484000
+61,Roseau,XCD,DO,DM,DMA,NA,Dominica,Dollar,212,+1-767,72813
+62,Santo Domingo,DOP,DR,DO,DOM,NA,Dominican Republic,Peso,214,+1-809 and 1-829,9823821
+63,Algiers,DZD,AG,DZ,DZA,AF,Algeria,Dinar,12,213,34586184
+64,Quito,USD,EC,EC,ECU,SA,Ecuador,Dollar,218,593,14790608
+65,Tallinn,EUR,EN,EE,EST,EU,Estonia,Euro,233,372,1291170
+66,Cairo,EGP,EG,EG,EGY,AF,Egypt,Pound,818,20,80471869
+67,El-Aaiun,MAD,WI,EH,ESH,AF,Western Sahara,Dirham,732,212,273008
+68,Asmara,ERN,ER,ER,ERI,AF,Eritrea,Nakfa,232,291,5792984
+69,Madrid,EUR,SP,ES,ESP,EU,Spain,Euro,724,34,46505963
+70,Addis Ababa,ETB,ET,ET,ETH,AF,Ethiopia,Birr,231,251,88013491
+71,Helsinki,EUR,FI,FI,FIN,EU,Finland,Euro,246,358,5244000
+72,Suva,FJD,FJ,FJ,FJI,OC,Fiji,Dollar,242,679,875983
+73,Stanley,FKP,FK,FK,FLK,SA,Falkland Islands,Pound,238,500,2638
+74,Palikir,USD,FM,FM,FSM,OC,Micronesia,Dollar,583,691,107708
+75,Torshavn,DKK,FO,FO,FRO,EU,Faroe Islands,Krone,234,298,48228
+76,Paris,EUR,FR,FR,FRA,EU,France,Euro,250,33,64768389
+77,Libreville,XAF,GB,GA,GAB,AF,Gabon,Franc,266,241,1545255
+78,London,GBP,UK,GB,GBR,EU,United Kingdom,Pound,826,44,62348447
+79,St. George's,XCD,GJ,GD,GRD,NA,Grenada,Dollar,308,+1-473,107818
+80,Tbilisi,GEL,GG,GE,GEO,AS,Georgia,Lari,268,995,4630000
+81,Cayenne,EUR,FG,GF,GUF,SA,French Guiana,Euro,254,594,195506
+82,St Peter Port,GBP,GK,GG,GGY,EU,Guernsey,Pound,831,+44-1481,65228
+83,Accra,GHS,GH,GH,GHA,AF,Ghana,Cedi,288,233,24339838
+84,Gibraltar,GIP,GI,GI,GIB,EU,Gibraltar,Pound,292,350,27884
+85,Nuuk,DKK,GL,GL,GRL,NA,Greenland,Krone,304,299,56375
+86,Banjul,GMD,GA,GM,GMB,AF,Gambia,Dalasi,270,220,1593256
+87,Conakry,GNF,GV,GN,GIN,AF,Guinea,Franc,324,224,10324025
+88,Basse-Terre,EUR,GP,GP,GLP,NA,Guadeloupe,Euro,312,590,443000
+89,Malabo,XAF,EK,GQ,GNQ,AF,Equatorial Guinea,Franc,226,240,1014999
+90,Athens,EUR,GR,GR,GRC,EU,Greece,Euro,300,30,11000000
+91,Grytviken,GBP,SX,GS,SGS,AN,South Georgia and the South Sandwich Islands,Pound,239,,30
+92,Guatemala City,GTQ,GT,GT,GTM,NA,Guatemala,Quetzal,320,502,13550440
+93,Hagatna,USD,GQ,GU,GUM,OC,Guam,Dollar,316,+1-671,159358
+94,Bissau,XOF,PU,GW,GNB,AF,Guinea-Bissau,Franc,624,245,1565126
+95,Georgetown,GYD,GY,GY,GUY,SA,Guyana,Dollar,328,592,748486
+96,Hong Kong,HKD,HK,HK,HKG,AS,Hong Kong,Dollar,344,852,6898686
+97,,AUD,HM,HM,HMD,AN,Heard Island and McDonald Islands,Dollar,334, ,
+98,Tegucigalpa,HNL,HO,HN,HND,NA,Honduras,Lempira,340,504,7989415
+99,Zagreb,HRK,HR,HR,HRV,EU,Croatia,Kuna,191,385,4491000

@@ -1,0 +1,101 @@
+,gmt,iata_code,city_iata_code,icao_code,country_iso2,geoname_id,latitude,longitude,airport_name,country_name,phone_number,timezone
+0,-10,AAA,AAA,NTGA,PF,6947726,-17.05,-145.41667,Anaa,French Polynesia,,Pacific/Tahiti
+1,10,AAB,AAB,YARY,AU,7730796,-26.7,141.04167,Arrabury,Australia,,Australia/Brisbane
+2,2,AAC,AAC,HEAR,EG,6297289,31.133333,33.75,El Arish International Airport,Egypt,,Africa/Cairo
+3,1,AAE,AAE,DABB,DZ,2570559,36.821392,7.811857,Les Salines,,,Africa/Algiers
+4,-5,AAF,AAF,KAAF,US,4146153,29.733334,-84.98333,Apalachicola Regional,United States,,America/New_York
+5,-3,AAG,AAG,SSYA,BR,3471795,-24.103611,-49.79,Arapoti,Brazil,,America/Sao_Paulo
+6,1,AAH,AAH,EDKA,DE,3247449,50.75,6.133333,Aachen/Merzbruck,Germany,,Europe/Berlin
+7,-3,AAI,AAI,SWRA,BR,7668483,-12.916667,-46.933334,Arraias,Brazil,,America/Araguaina
+8,12,AAK,AAK,NGUK,KI,7521791,0.166667,173.58333,Aranuka,Kiribati,,Pacific/Tarawa
+9,1,AAL,AAL,EKYT,DK,2624887,57.08655,9.872241,Aalborg,Denmark,,Europe/Copenhagen
+10,2,AAM,AAM,FAMD,ZA,7668229,-24.8,31.533333,Mala Mala,South Africa,,Africa/Johannesburg
+11,4,AAN,AAN,OMAL,AE,6300095,24.260231,55.616627,Al Ain,United Arab Emirates,,Asia/Dubai
+12,3,AAQ,AAQ,URKA,RU,6300989,44.9,37.316666,Anapa,Russia,,Europe/Moscow
+13,1,AAR,AAR,EKAH,DK,2611665,56.30823,10.626351,Aarhus Airport,Denmark,,Europe/Copenhagen
+14,8,AAT,AAT,ZWAT,CN,7910421,47.750362,88.08444,Altay,China,,Asia/Shanghai
+15,-3,AAX,AAX,SBAX,BR,7668431,-19.568056,-46.92917,Araxa,Brazil,,America/Sao_Paulo
+16,3,AAY,AAY,OYGD,YE,7668412,16.19596,52.173256,Al Ghaydah,Yemen,,Asia/Aden
+17,-6,AAZ,AAZ,MGQZ,GT,6299804,14.87,-91.5,Quetzaltenango,Guatemala,,America/Guatemala
+18,7,ABA,ABA,UNAA,RU,6300982,53.716667,91.5,Abakan,Russia,,Asia/Krasnoyarsk
+19,1,ABB,ABB,EGUD,NG,7668214,51.666668,-1.283333,RAF Station,Nigeria,,Africa/Lagos
+20,1,ABC,ABC,LEAB,ES,6299323,38.948334,-1.863333,Los Llanos,Spain,,Europe/Madrid
+21,3.30,ABD,ABD,OIAA,IR,6300034,30.363905,48.226597,Abadan,Iran,,Asia/Tehran
+22,-5,ABE,ABE,KABE,US,5200013,40.651573,-75.434364,Lehigh Valley International,United States,,America/New_York
+23,10,ABH,ABH,YAPH,AU,7668679,-23.65,146.63333,Alpha,Australia,,Australia/Brisbane
+24,-6,ABI,ABI,KABI,US,4669647,32.409443,-99.679726,Municipal,United States,,America/Chicago
+25,,ABJ,ABJ,DIAP,CI,6296433,5.254879,-3.933015,Felix Houphouet Boigny,,,Africa/Abidjan
+26,3,ABK,ABK,HADK,ET,6297274,6.733889,44.26611,Kabri Dar,Ethiopia,,Africa/Addis_Ababa
+27,-9,ABL,ABL,PAFM,US,5879298,67.0875,-157.84584,Ambler,United States,,America/Anchorage
+28,10,ABM,ABM,YBAM,AU,7730800,-10.942619,142.45033,Bamaga Injinoo,Australia,,Australia/Brisbane
+29,,ABO,ABO,DIAO,CI,8260695,5.433333,-3.216667,Aboisso,,,Africa/Abidjan
+30,-7,ABQ,ABQ,KABQ,US,5454724,35.049625,-106.617195,Albuquerque International,United States,505-244-7700,America/Denver
+31,-6,ABR,ABR,KABR,US,5225860,45.4525,-98.42611,Municipal,United States,,America/Chicago
+32,2,ABS,ABS,HEBL,EG,6452622,22.367567,31.609774,Abu Simbel,Egypt,,Africa/Cairo
+33,3,ABT,ABT,OEBA,SA,6300010,20.29401,41.64002,Al-Aqiq,Saudi Arabia,,Asia/Riyadh
+34,8,ABU,ABU,WATA,ID,7730801,-9.133333,124.88333,Atambua,Indonesia,,Asia/Makassar
+35,1,ABV,ABV,DNAA,NG,7649170,9.004614,7.270447,Nnamdi Azikiwe International Airport,Nigeria,,Africa/Lagos
+36,10,ABX,ABX,YMAY,AU,6301309,-36.069626,146.95453,Albury,Australia,,Australia/Sydney
+37,-5,ABY,ABY,KABY,US,4223821,31.532223,-84.19611,Dougherty County,United States,,America/New_York
+38,,ABZ,ABZ,EGPD,GB,6296624,57.200253,-2.204186,Dyce,United Kingdom,,Europe/London
+39,-6,ACA,ACA,MMAA,MX,6299826,16.762403,-99.75459,General Juan N. Alvarez International,Mexico,,America/Mexico_City
+40,-5,ACB,ACB,KACB,US,4985583,44.983334,-85.21667,Antrim County,United States,,America/Detroit
+41,,ACC,ACC,DGAA,GH,2306104,5.60737,-0.171769,Kotoka,Ghana,,Africa/Accra
+42,-5,ACD,ACD,SKAD,CO,7668454,8.516667,-77.3,Acandi,Colombia,,America/Bogota
+43,,ACE,ACE,GCRR,ES,6297189,28.950668,-13.609059,Lanzarote,Spain,902 404 704,Atlantic/Canary
+44,1,ACH,ACH,LSZR,CH,6299723,47.483334,9.566667,Altenrhein,Switzerland,,Europe/Zurich
+45,,ACI,ACI,EGJA,GG,6296593,49.709347,-2.215369,The Blaye,Guernsey,,Europe/Guernsey
+46,5.30,ACJ,ACJ,VCCA,LK,1251081,8.35,80.38333,Anuradhapura,Sri Lanka,,Asia/Colombo
+47,-5,ACK,ACK,KACK,US,4944927,41.256668,-70.05972,Nantucket Memorial,United States,,America/New_York
+48,-6,ACN,ACN,MMCC,MX,7668344,29.3,-100.916664,International,Mexico,,America/Matamoros
+49,3.30,ACP,ACP,OITM,IR,17839,37.347244,46.145115,Sahand,Iran,,Asia/Tehran
+50,-5,ACR,ACR,SKAC,CO,7730802,-0.383333,-72.3,Araracuara,Colombia,,America/Bogota
+51,7,ACS,ACS,UNKS,RU,7668523,56.266666,90.566666,Achinsk,Russia,,Asia/Krasnoyarsk
+52,-6,ACT,ACT,KACT,US,4739545,31.609133,-97.22321,Municipal,United States,,America/Chicago
+53,-8,ACV,ACV,KACV,US,5558955,40.970913,-124.106926,Arcata,United States,,America/Los_Angeles
+54,-5,ACY,AIY,KACY,US,4500551,39.450703,-74.572235,Atlantic City International,United States,,America/New_York
+55,3.30,ACZ,ACZ,OIZB,IR,6300083,31.087694,61.542244,Zabol Airport,Iran,,Asia/Tehran
+56,3,ADA,ADA,LTAF,TR,6299727,36.98503,35.29736,Adana,Turkey,,Europe/Istanbul
+57,3,ADB,IZM,LTBJ,TR,6299750,38.294403,27.147594,Adnan Menderes Airport,Turkey,,Europe/Istanbul
+58,3,ADD,ADD,HAAB,ET,6297257,8.983759,38.7959,Bole International,Ethiopia,-425,Africa/Addis_Ababa
+59,3,ADE,ADE,OYAA,YE,6300134,12.826116,45.037537,International,Yemen,,Asia/Aden
+60,3,ADF,ADF,LTCP,TR,6457345,37.75,38.266666,Adiyaman,Turkey,,Europe/Istanbul
+61,-5,ADG,ADG,KADG,US,4999082,41.9,-84.03333,Lenawee County,United States,,America/Detroit
+62,9,ADH,ADH,UEEA,RU,7730803,58.6,125.4,Aldan,Russia,,Asia/Yakutsk
+63,2,ADI,ADI,FYAR,NA,7668263,-22.4,15,Arandis,Namibia,,Africa/Windhoek
+64,2,ADJ,AMM,OJAM,JO,250437,31.97533,35.98277,Marka International Airport,Jordan,,Asia/Amman
+65,-10,ADK,ADK,PADK,US,6300161,51.88278,-176.64473,Adak Island Ns,United States,,America/Adak
+66,9.30,ADL,ADL,YPAD,AU,6301322,-34.938175,138.53735,Adelaide International Airport,Australia,+61 8-8308-92,Australia/Adelaide
+67,-6,ADM,ADM,KADM,US,4529475,34.303055,-97.01945,Ardmore Municipal Airport,United States,,America/Chicago
+68,9.30,ADO,ADO,YAMK,AU,7730805,-31.016666,137.15,Andamooka,Australia,,Australia/Adelaide
+69,-9,ADQ,ADQ,PADQ,US,5866583,57.755276,-152.51297,Kodiak Airport,United States,,America/Anchorage
+70,-5,ADR,ADR,KPHH,US,4569376,33.45,-79.566666,Andrews,United States,,America/New_York
+71,-6,ADS,DFW,KADS,US,4669829,32.783333,-97.3,Addison Airport,United States,,America/Chicago
+72,-6,ADT,ADT,KADH,US,4529103,34.8,-96.666664,Ada Municipal,United States,,America/Chicago
+73,3.30,ADU,ADU,OITL,IR,6300077,38.323826,48.42125,Ardabil,Iran,,Asia/Tehran
+74,,ADX,ADX,EGQL,GB,6296639,56.36667,-2.866667,Leuchars,United Kingdom,,Europe/London
+75,2,ADY,ADY,FAAL,ZA,7668227,-22.666668,29.05,Alldays,South Africa,,Africa/Johannesburg
+76,-5,ADZ,ADZ,SKSP,CO,6300759,12.586047,-81.70221,San Andres Island,Colombia,,America/Bogota
+77,12,AEA,AEA,NGTB,KI,7521789,0.483333,173.85,Abemama Atoll,Kiribati,,Pacific/Tarawa
+78,7,AEG,AEG,WIME,ID,8298724,1.399722,99.416664,Aek Godang,Indonesia,,Asia/Jakarta
+79,1,AEH,AEH,FTTC,TD,245786,13.851389,20.850834,Abéché,,,Africa/Ndjamena
+80,-6,AEL,AEL,KAEL,US,5016033,43.65,-93.36667,Albert Lea,United States,,America/Chicago
+81,,AEO,AEO,GQNA,MR,6297233,16.709167,-9.635556,Aioun El Atrouss,Mauritania,,Africa/Nouakchott
+82,-3,AEP,BUE,SABE,AR,6301847,-34.55622,-58.41667,Aeroparque Jorge Newbery,Argentina,,America/Argentina/Buenos_Aires
+83,3,AER,AER,URSS,RU,6300995,43.44884,39.941105,Sochi/Adler International Airport,Russia,,Europe/Moscow
+84,1,AES,AES,ENAL,NO,6296719,62.559643,6.116605,Vigra,Norway,,Europe/Oslo
+85,-9,AET,AET,PFAL,US,5879223,66.56167,-152.65834,Allakaket,United States,,America/Anchorage
+86,3.30,AEU,AEU,OIBA,IR,6300041,25.8875,55.041668,Abu Musa,Iran,,Asia/Tehran
+87,-6,AEX,AEX,KAEX,US,8113669,31.321268,-92.53958,Alexandria International,United States,,America/Chicago
+88,,AEY,AEY,BIAR,IS,6295706,65.654564,-18.075068,Akureyri,Iceland,,Atlantic/Reykjavik
+89,-3,AFA,AFA,SAMR,AR,6300529,-34.58917,-68.40056,San Rafael,Argentina,,America/Argentina/Mendoza
+90,2,AFD,AFD,FAPA,ZA,964433,-33.583332,26.883333,Port Alfred,South Africa,,Africa/Johannesburg
+91,-7,AFF,COS,KAFF,US,5442475,38.833332,-104.7,USAF Academy Airstrip,United States,,America/Denver
+92,-5,AFI,AFI,SKAM,CO,7730806,6.916667,-75.066666,Amalfi,Colombia,,America/Bogota
+93,-4,AFL,AFL,SBAT,BR,6316343,-9.872456,-56.104767,Alta Floresta,Brazil,,America/Cuiaba
+94,-5,AFN,AFN,KAFN,US,5088066,42.833332,-72.066666,Municipal,United States,,America/New_York
+95,-7,AFO,AFO,KAFO,US,5816866,42.733334,-110.933334,Municipal,United States,,America/Denver
+96,5,AFS,AFS,UTSN,UZ,7730807,41.61361,64.233055,Zarafshan,Uzbekistan,,Asia/Samarkand
+97,11,AFT,AFT,AGAF,SB,8298931,-9.2,160.85,Afutara Aerodrome,Solomon Islands,,Pacific/Guadalcanal
+98,-6,AFW,DFW,KAFW,US,4691932,32.986668,-97.316666,Fort Worth Alliance,United States,,America/Chicago
+99,3,AFY,AFY,LTAH,TR,6299728,38.733334,30.6,Afyon,Turkey,,Europe/Istanbul
