@@ -80,7 +80,7 @@ dag = DAG(
 # first task is to get the flight data from aviation stack
 task1 = BashOperator(
 	task_id = 'get_flight',
-	bash_command = 'python ~/airflow/dags/get_real_time_flight_data.py' ,
+	bash_command = 'python ~/airflow/dags/get_flight_data.py' ,
 	dag = dag
 	)
 

@@ -34,8 +34,8 @@ data = response.json()['data']
 data = convert_json(data)
 
 # create new data frame
-real_time_flights = pd.DataFrame(data)
-real_time_flights = real_time_flights.iloc[:, 0:33]
+flight_data = pd.DataFrame(data)
+flight_data = flight_data.iloc[:, 0:33]
 
 column_name = [
     'departure_scheduled',
@@ -52,7 +52,7 @@ column_name = [
 
 # convert RFC3339 (ISO8601) to datetime
 for column in column_name:
-    convert_datetime(real_time_flights, column)
+    convert_datetime(flight_data, column)
 
 # replace nan values
 values = {
@@ -75,7 +75,7 @@ values = {
     'arrival_actual_runway': '1000-01-01 00:00:00'
 }
 
-real_time_flights.fillna(value = values, inplace = True)
+flight_data.fillna(value = values, inplace = True)
 
 # load data into csv
-real_time_flights.to_csv('files/flight.csv')
+flight_data.to_csv('files/flight.csv')
