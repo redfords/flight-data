@@ -23,6 +23,7 @@ drop_table(tables)
 
 # table columns and data types
 country = """
+	country_id INT NOT NULL AUTO_INCREMENT,
 	capital VARCHAR(20),
 	currency_code CHAR(3),
 	fips_code CHAR(2),
@@ -34,10 +35,11 @@ country = """
 	country_iso_numeric INT,
 	phone_prefix VARCHAR(20),
 	population INT,
-	PRIMARY KEY (country_iso2)
+	PRIMARY KEY (country_id)
 """
 
 city = """
+	city_id INT NOT NULL AUTO_INCREMENT,
 	gmt INT,
 	iata_code CHAR(3) NOT NULL,
 	country_iso2 CHAR(2),
@@ -46,10 +48,11 @@ city = """
 	longitude VARCHAR(20),
 	city_name VARCHAR(30),
 	timezone VARCHAR(40),
-	PRIMARY KEY (iata_code)
+	PRIMARY KEY (city_id)
 """
 
 airport = """
+	airport_id INT NOT NULL AUTO_INCREMENT,
 	gmt INT,
 	iata_code CHAR(3),
 	city_iata_code CHAR(3),
@@ -62,10 +65,11 @@ airport = """
 	country_name VARCHAR(60),
 	phone_number VARCHAR(50),
 	timezone VARCHAR(40),
-	PRIMARY KEY (icao_code)
+	PRIMARY KEY (airport_id)
 """
 
 airline = """
+	airline_id INT NOT NULL AUTO_INCREMENT,
 	fleet_average_age FLOAT,
 	callsign VARCHAR(30),
 	hub_code CHAR(3),
@@ -79,7 +83,7 @@ airline = """
 	fleet_size INT,
 	STATUS VARCHAR(7),
 	TYPE VARCHAR(20),
-	PRIMARY KEY (airline_name)
+	PRIMARY KEY (airline_id)
 """
 
 flight = """
