@@ -1,5 +1,12 @@
 # Flight data analysis
 
-Real-time flight data from Aviationstack API.
+Real-time flight data from Aviationstack API. Using .json and .csv files, a single source is loaded into the MySQL database.
 
-Using .json and .csv sources, Pandas and SQLAlchemy and MySQL.
+## Modules
+
+- Requests
+- Pandas
+- Numpy
+- SQLAlchemy
+- Pytest
+- Apache Airflow
