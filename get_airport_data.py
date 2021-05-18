@@ -6,7 +6,7 @@ access_key = "?limit=100&access_key=510c0e5f6d29bf5e1701266de1280e06"
 
 url = "http://api.aviationstack.com/v1/"
 
-
+# get .json from request
 def extract_data(url):
     response = requests.get(url)
     response_data = response.json()['data']
@@ -14,16 +14,17 @@ def extract_data(url):
 
     return data
 
+# convert .json into .csv
 def convert_csv(url_name, file_name):
     data = extract_data(url + url_name + access_key)
     data.to_csv(file_name + '.csv')
 
 # list of files to extract
 file_name = {
-    'airports': 'airport',
-    'airlines': 'airline',
-    'cities': 'city',
-    'countries': 'country'
+    'airports': 'files/airport',
+    'airlines': 'files/airline',
+    'cities': 'files/city',
+    'countries': 'files/country'
 }
 
 for key, value in file_name.items():

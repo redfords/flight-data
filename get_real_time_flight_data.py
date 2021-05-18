@@ -21,9 +21,9 @@ def convert_json(list_of_dict):
 
     return items
 
-def convert_datetime(column_name):
-    real_time_flights[column_name] = pd.to_datetime(
-        real_time_flights[column_name]).dt.tz_convert(None)
+def convert_datetime(data, column):
+    data[column] = ((data[column].astype(str)).str.replace('T', ' ')).str[:-6]
+    data[column] = pd.to_datetime(data[column])
 
 # extract real time flights data
 access_key = "510c0e5f6d29bf5e1701266de1280e06"
@@ -37,7 +37,6 @@ data = convert_json(data)
 real_time_flights = pd.DataFrame(data)
 real_time_flights = real_time_flights.iloc[:, 0:33]
 
-# list of columns to correct
 column_name = [
     'departure_scheduled',
     'departure_estimated',
@@ -53,7 +52,30 @@ column_name = [
 
 # convert RFC3339 (ISO8601) to datetime
 for column in column_name:
-    convert_datetime(column)
+    convert_datetime(real_time_flights, column)
+
+# replace nan values
+values = {
+    'departure_airport': '-',
+    'departure_timezone': '-',
+    'departure_terminal': '-',
+    'departure_gate': '-',
+    'departure_delay': 0,
+    'departure_actual': '1000-01-01 00:00:00',
+    'departure_estimated_runway': '1000-01-01 00:00:00',
+    'departure_actual_runway': '1000-01-01 00:00:00',
+    'arrival_airport': '-',
+    'arrival_timezone': '-',
+    'arrival_terminal': '-',
+    'arrival_gate': '-',
+    'arrival_baggage': '-',
+    'arrival_delay': 0,
+    'arrival_actual': '1000-01-01 00:00:00',
+    'arrival_estimated_runway': '1000-01-01 00:00:00',
+    'arrival_actual_runway': '1000-01-01 00:00:00'
+}
+
+real_time_flights.fillna(value = values, inplace = True)
 
 # load data into csv
-real_time_flights.to_csv('flight.csv')
+real_time_flights.to_csv('files/flight.csv')
