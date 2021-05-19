@@ -1,6 +1,7 @@
 import requests
 import json
 import pandas as pd
+import numpy as np
 
 access_key = "?limit=100&access_key=510c0e5f6d29bf5e1701266de1280e06"
 
@@ -17,14 +18,14 @@ def extract_data(url):
 # convert .json into .csv
 def convert_csv(url_name, file_name):
     data = extract_data(url + url_name + access_key)
-    data.to_csv(file_name + '.csv')
+    data.to_csv('files/' + file_name + '.csv')
 
 # list of files to extract
 file_name = {
-    'airports': 'files/airport',
-    'airlines': 'files/airline',
-    'cities': 'files/city',
-    'countries': 'files/country'
+    'airports': 'airport',
+    'airlines': 'airline',
+    'cities': 'city',
+    'countries': 'country'
 }
 
 for key, value in file_name.items():

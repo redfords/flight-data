@@ -1,6 +1,7 @@
 import requests
 import json
 import pandas as pd
+import numpy as np
 import collections.abc
 
 # create new key for nested dictionary

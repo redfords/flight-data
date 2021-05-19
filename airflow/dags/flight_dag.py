@@ -62,5 +62,12 @@ task3 =  PythonOperator(
 	dag = dag
 	)
 
+# perform data analysis
+task4 =  BashOperator(
+	task_id = 'data_analysis',
+	bash_command = 'python ~/airflow/dags/data_analysis.py' ,
+	dag = dag
+	)
+
 # task hierarchy
-(task1, task2) >> task3
+(task1, task2) >> task3 >> task4
