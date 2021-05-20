@@ -10,3 +10,16 @@ Real-time flight data from Aviationstack API. Using .json and .csv files, a sing
 - SQLAlchemy
 - Pytest
 - Apache Airflow
+
+## Data Model
+
+Dimension Tables:
+`country`
+`city`
+`airport`
+`airline`
+
+Fact Tables:
+`flight`
+
+![Model](https://i.imgur.com/iF8tTvK.jpg)
