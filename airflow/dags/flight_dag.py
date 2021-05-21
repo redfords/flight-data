@@ -4,10 +4,11 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow.providers.mysql.hooks.mysql import MySqlHook
 import pandas as pd
+import data_analysis
+
+mysql_hook = MySqlHook(mysql_conn_id = 'flight_id')
 
 def load_data():
-	mysql_hook = MySqlHook(mysql_conn_id = 'flight_id')
-
 	table_name = ['country', 'city', 'airport', 'airline', 'flight']
 
 	for table in table_name:
@@ -20,6 +21,14 @@ def load_data():
 
 		# insert list of tuples into db
 		mysql_hook.insert_rows(table = table_name, rows = rows)
+
+def run_data_analysis():
+	queries = data_analysis.sql_queries()
+
+	with pd.ExcelWriter('files/output.xlsx') as writer:
+		for key, value in queries.items():
+			data = mysql_hook.get_pandas_df(key)
+			data.to_excel(writer, index = False, sheet_name = value)
 
 # define the default dag arguments
 default_args = {
@@ -63,9 +72,10 @@ task3 =  PythonOperator(
 	)
 
 # perform data analysis
-task4 =  BashOperator(
+task4 =  PythonOperator(
 	task_id = 'data_analysis',
-	bash_command = 'python ~/airflow/dags/data_analysis.py' ,
+	provide_context = True,
+	python_callable = run_data_analysis,
 	dag = dag
 	)
 
