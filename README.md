@@ -13,11 +13,11 @@ Real-time flight data from Aviationstack API. Using .json and .csv files, a sing
 
 ## Data Model
 
-Dimension Tables:
+Dimension tables:
 `country`
 `city`
 `airport`
 `airline`
 
-Fact Tables:
+Fact tables:
 `flight`
