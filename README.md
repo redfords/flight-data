@@ -1,4 +1,4 @@
-# Flight data analysis
+# Flight Data Analysis
 
 Real-time flight data from Aviationstack API. Using .json and .csv files, a single source is loaded into the MySQL database.
 
@@ -13,13 +13,11 @@ Real-time flight data from Aviationstack API. Using .json and .csv files, a sing
 
 ## Data Model
 
-Dimension Tables:
+Dimension tables:
 `country`
 `city`
 `airport`
 `airline`
 
-Fact Tables:
+Fact tables:
 `flight`
-
-![Model](https://i.imgur.com/HUjB2lx.jpg)
