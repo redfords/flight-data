@@ -22,6 +22,7 @@ tables = ['flight', 'airport', 'airline', 'city', 'country']
 drop_table(tables)
 
 # table columns and data types
+# foreign keys missing due to API free-tier request limit
 country = """
 	country_id INT NOT NULL AUTO_INCREMENT,
 	capital VARCHAR(20),
