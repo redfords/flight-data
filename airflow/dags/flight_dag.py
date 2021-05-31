@@ -9,7 +9,7 @@ import data_analysis
 mysql_hook = MySqlHook(mysql_conn_id = 'flight_id')
 
 def load_data():
-	table_name = ['country', 'city', 'airport', 'airline', 'flight']
+	table_name = ['country', 'city', 'airport', 'airline', 'airplane', 'flights']
 
 	for table in table_name:
 		# convert .csv into dataframe

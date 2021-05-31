@@ -79,4 +79,4 @@ values = {
 flight_data.fillna(value = values, inplace = True)
 
 # load data into csv
-flight_data.to_csv('files/flight.csv')
+flight_data.to_csv('files/flights.csv')

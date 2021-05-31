@@ -24,7 +24,7 @@ def insert_into_db(table_name):
     data = data.iloc[:, 1:]
     data.to_sql(table_name, con = engine, if_exists = 'append', index = False)
 
-tables_to_insert = ['country', 'city', 'airport', 'airline', 'flight']
+tables_to_insert = ['country', 'city', 'airport', 'airline', 'airplane', 'flights']
 
 for table in tables_to_insert:
     insert_into_db(table)

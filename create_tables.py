@@ -17,7 +17,7 @@ def drop_table(tables):
 		query = f"DROP TABLE if EXISTS {table};"
 		engine.execute(query)
 
-tables = ['flight', 'airport', 'airline', 'city', 'country']
+tables = ['flights', 'airplane', 'airport', 'airline', 'city', 'country']
 
 drop_table(tables)
 
@@ -87,7 +87,19 @@ airline = """
 	PRIMARY KEY (airline_id)
 """
 
-flight = """
+airplane = """
+	airplane_id INT NOT NULL AUTO_INCREMENT,
+	registration_number VARCHAR(10),
+	production_line VARCHAR(80),
+	iata_type VARCHAR(10),
+	model_name VARCHAR(10),
+	model_code VARCHAR(10),
+	icao_code_hex VARCHAR(10),
+	iata_code_short VARCHAR(10),
+	PRIMARY KEY (airplane_id)
+"""
+
+flights = """
 	flight_id INT NOT NULL AUTO_INCREMENT,
 	flight_date DATE,
 	flight_status VARCHAR(10),
@@ -135,7 +147,7 @@ tables = {
     city: 'city',
     airport: 'airport',
     airline: 'airline',
-    flight: 'flight'
+    flights: 'flights'
 }
 
 create_table(tables)

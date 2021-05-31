@@ -18,7 +18,7 @@ def sql_queries():
 	# flights by airline and status (active, scheduled or cancelled)
 	flight_status = """
 	SELECT airline_name, flight_status, COUNT(flight_id) AS flights
-	FROM flight
+	FROM flights
 	GROUP BY airline_name, flight_status
 	ORDER BY COUNT(flight_id) DESC, airline_name
 	"""
@@ -31,13 +31,13 @@ def sql_queries():
 	FROM airport
 	LEFT JOIN (
 		SELECT *
-		FROM flight
+		FROM flights
 		WHERE date_format(departure_scheduled,'%%Y-%%m-%%d') = date_format(NOW(),'%%Y-%%m-%%d')
 		) AS departure
 	ON departure.departure_icao = airport.icao_code
 	LEFT JOIN (
 		SELECT *
-		FROM flight
+		FROM flights
 		WHERE date_format(arrival_scheduled,'%%Y-%%m-%%d') = date_format(NOW(),'%%Y-%%m-%%d')
 		) AS arrival
 	ON arrival.arrival_icao = airport.icao_code
@@ -48,8 +48,8 @@ def sql_queries():
 
 	# airlines with two or more flights scheduled for this month
 	multiple_flights = """
-	SELECT airline_name, COUNT(flight_id) AS flights
-	FROM flight
+	SELECT airline_name, COUNT(flight_id) AS number_of_flights
+	FROM flights
 	WHERE DATE_FORMAT(flight_date,'%%Y-%%m') = date_format(NOW(),'%%Y-%%m')
 	GROUP BY airline_name
 	HAVING COUNT(flight_id) > 1
@@ -67,9 +67,9 @@ def sql_queries():
 		SELECT DISTINCT DATE_FORMAT(arrival_scheduled,'%%Y-%%m-%%d') AS 'day', city_name,
 			COUNT(flight_id) over (
 				PARTITION BY DATE_FORMAT(arrival_scheduled,'%%Y-%%m-%%d'), city_name) total_arrivals
-			FROM flight
+			FROM flights
 			INNER JOIN airport
-			ON flight.arrival_icao = airport.icao_code
+			ON flights.arrival_icao = airport.icao_code
 			INNER JOIN city
 			ON airport.city_iata_code = city.iata_code) total) ranking
 	WHERE row_num <= 5
@@ -81,7 +81,7 @@ def sql_queries():
 	FROM airline
 	LEFT JOIN (
 		SELECT *
-		FROM flight
+		FROM flights
 		WHERE flight_date = date_format(NOW(),'%%Y-%%m-%%d')) AS flight_today
 	ON airline.icao_code = flight_today.airline_icao
 	WHERE flight_today.airline_icao IS NULL
@@ -107,7 +107,7 @@ def sql_queries():
 			SELECT DISTINCT DATE_FORMAT(flight_date,'%%Y-%%m') as 'month', airline_name,
 				COUNT(flight_id) over (
 					PARTITION BY DATE_FORMAT(flight_date,'%%Y-%%m'), airline_name) total_flights
-			FROM flight
+			FROM flights
 			WHERE flight_status = 'cancelled') total ) ranking
 	WHERE row_num <= 10
 	"""
@@ -131,9 +131,9 @@ def sql_queries():
 	total_us_flights = """
 	SELECT date_format(departure_scheduled,'%%Y-%%m') AS MONTH,
 		COUNT(flight_id) AS departures
-	FROM flight
+	FROM flights
 	INNER JOIN airport
-	ON airport.icao_code = flight.departure_icao
+	ON airport.icao_code = flights.departure_icao
 	WHERE date_format(departure_scheduled,'%%Y') = date_format(NOW(),'%%Y') AND
 		country_iso2 = 'US'
 	GROUP BY date_format(departure_scheduled,'%%Y-%%m')

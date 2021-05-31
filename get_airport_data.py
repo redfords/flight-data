@@ -25,7 +25,8 @@ file_name = {
     'airports': 'airport',
     'airlines': 'airline',
     'cities': 'city',
-    'countries': 'country'
+    'countries': 'country',
+    'airplanes': 'airplane'
 }
 
 for key, value in file_name.items():
