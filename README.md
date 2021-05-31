@@ -18,6 +18,10 @@ Dimension tables:
 `city`
 `airport`
 `airline`
+`airplane`
+`date`
 
 Fact tables:
-`flight`
+`flights`
+
+![Model](https://i.imgur.com/mkyzhp2.jpg)
