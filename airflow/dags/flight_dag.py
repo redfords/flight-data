@@ -9,23 +9,119 @@ import data_analysis
 mysql_hook = MySqlHook(mysql_conn_id = 'flight_id')
 
 def load_data():
-	table_name = ['country', 'city', 'airport', 'airline', 'airplane', 'flights']
+	# define target fields
+	country = [
+		'capital',
+		'currency_code',
+		'fips_code',
+		'country_iso2',
+		'country_iso3',
+		'continent',
+		'country_name',
+		'currency_name',
+		'country_iso_numeric',
+		'phone_prefix',
+		'population'
+	]
 
-	for table in table_name:
+	city = [
+		'gmt',
+		'iata_code',
+		'country_iso2',
+		'geoname_id',
+		'latitude',
+		'longitude',
+		'city_name',
+		'timezone'
+	]
+
+	airport = [
+		'gmt',
+		'iata_code',
+		'city_iata_code',
+		'icao_code',
+		'country_iso2',
+		'geoname_id',
+		'latitude',
+		'longitude',
+		'airport_name',
+		'country_name',
+		'phone_number',
+		'timezone'
+	]
+
+	airline = [
+		'fleet_average_age',
+		'callsign',
+		'hub_code',
+		'iata_code',
+		'icao_code',
+		'country_iso2',
+		'date_founded',
+		'iata_prefix_accounting',
+		'airline_name',
+		'country_name',
+		'fleet_size',
+		'STATUS',
+		'TYPE'
+	]
+
+	flights = [
+		'flight_date',
+		'flight_status',
+		'departure_icao',
+		'departure_terminal',
+		'departure_gate',
+		'departure_delay',
+		'departure_scheduled',
+		'departure_estimated',
+		'departure_actual',
+		'departure_estimated_runway',
+		'departure_actual_runway',
+		'arrival_icao',
+		'arrival_terminal',
+		'arrival_gate',
+		'arrival_delay',
+		'arrival_scheduled',
+		'arrival_estimated',
+		'arrival_actual',
+		'arrival_estimated_runway',
+		'arrival_actual_runway',
+		'airline_icao',
+		'flight_number',
+		'flight_iata',
+		'flight_icao'
+]
+
+	# define tables to load
+	table_name = {
+		'country': country,
+		'city': city,
+		'airport': airport,
+		'airline': airline,
+		'flights': flights
+		}
+
+	for table, target_fields in table_name.items():
 		# convert .csv into dataframe
-		data = pd.read_csv('~/airflow/dags/files/' + table_name + '.csv')
+		data = pd.read_csv('~/airflow/dags/files/' + table + '.csv')
 		data = data.iloc[:, 1:]
+		replace_na = data.fillna(0)
 
 		# convert dataframe into list of tuples
-		rows = list(data.itertuples(index = False, name = None))
+		rows = list(replace_na.itertuples(index = False, name = None))
 
 		# insert list of tuples into db
-		mysql_hook.insert_rows(table = table_name, rows = rows)
+		mysql_hook.insert_rows(
+			table = table,
+			rows = rows,
+			target_fields = target_fields
+		)
 
 def run_data_analysis():
 	queries = data_analysis.sql_queries()
 
-	with pd.ExcelWriter('files/output.xlsx') as writer:
+	with pd.ExcelWriter('~/airflow/dags/files/output.xlsx') as writer:
 		for key, value in queries.items():
 			data = mysql_hook.get_pandas_df(key)
 			data.to_excel(writer, index = False, sheet_name = value)
@@ -43,7 +139,7 @@ default_args = {
 
 # define the dag, start date and frequency
 dag = DAG(
-	dag_id = 'flight_dat',
+	dag_id = 'flight_dag',
 	default_args = default_args,
 	start_date = datetime(2021,5,17),
 	schedule_interval = timedelta(minutes = 1440)
@@ -51,21 +147,21 @@ dag = DAG(
 
 # get the flight data from aviation stack
 task1 = BashOperator(
-	task_id = 'get_flight',
+	task_id = 'get_flight_date',
 	bash_command = 'python ~/airflow/dags/get_flight_data.py' ,
 	dag = dag
 	)
 
 # get the airport and airline data from aviation stack
 task2 = BashOperator(
-	task_id = 'get_airport',
+	task_id = 'get_airport_data',
 	bash_command = 'python ~/airflow/dags/get_airport_data.py' ,
 	dag = dag
 	)
 
 # process and load into the database
 task3 =  PythonOperator(
-	task_id = 'transform_load',
+	task_id = 'load_into_db',
 	provide_context = True,
 	python_callable = load_data,
 	dag = dag
@@ -73,7 +169,7 @@ task3 =  PythonOperator(
 
 # perform data analysis
 task4 =  PythonOperator(
-	task_id = 'data_analysis',
+	task_id = 'run_data_analysis',
 	provide_context = True,
 	python_callable = run_data_analysis,
 	dag = dag
