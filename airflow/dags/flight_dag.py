@@ -58,12 +58,21 @@ def load_data():
 		'icao_code',
 		'country_iso2',
 		'date_founded',
-		'iata_prefix_accounting',
 		'airline_name',
-		'country_name',
 		'fleet_size',
 		'STATUS',
 		'TYPE'
+	]
+
+	airplane = [
+		'iata_type',
+		'iata_code_short',
+		'construction_number',
+		'delivery_date',
+		'engines_count',
+		'engines_type',
+		'first_flight_date',
+		'icao_code_hex'
 	]
 
 	flights = [
@@ -99,6 +108,7 @@ def load_data():
 		'city': city,
 		'airport': airport,
 		'airline': airline,
+		'airplane': airplane,
 		'flights': flights
 		}
 
@@ -147,20 +157,34 @@ dag = DAG(
 
 # get the flight data from aviation stack
 task1 = BashOperator(
-	task_id = 'get_flight_date',
+	task_id = 'get_flight_data',
 	bash_command = 'python ~/airflow/dags/get_flight_data.py' ,
 	dag = dag
 	)
 
-# get the airport and airline data from aviation stack
+# get the airport data from aviation stack
 task2 = BashOperator(
 	task_id = 'get_airport_data',
 	bash_command = 'python ~/airflow/dags/get_airport_data.py' ,
 	dag = dag
 	)
 
+# get the airline data from aviation stack
+task3 = BashOperator(
+	task_id = 'get_airline_data',
+	bash_command = 'python ~/airflow/dags/get_airline_data.py' ,
+	dag = dag
+	)
+
+# get the airplane data from aviation stack
+task4 = BashOperator(
+	task_id = 'get_airplane_data',
+	bash_command = 'python ~/airflow/dags/get_airplane_data.py' ,
+	dag = dag
+	)
+
 # process and load into the database
-task3 =  PythonOperator(
+task5 =  PythonOperator(
 	task_id = 'load_into_db',
 	provide_context = True,
 	python_callable = load_data,
@@ -168,7 +192,7 @@ task3 =  PythonOperator(
 	)
 
 # perform data analysis
-task4 =  PythonOperator(
+task6 =  PythonOperator(
 	task_id = 'run_data_analysis',
 	provide_context = True,
 	python_callable = run_data_analysis,
@@ -176,4 +200,4 @@ task4 =  PythonOperator(
 	)
 
 # task hierarchy
-(task1, task2) >> task3 >> task4
+(task1, task2, task3, task4) >> task5 >> task6

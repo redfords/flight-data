@@ -91,9 +91,7 @@ airline = """
 	icao_code CHAR(3),
 	country_iso2 CHAR(2),
 	date_founded YEAR,
-	iata_prefix_accounting INT,
 	airline_name VARCHAR(60) NOT NULL,
-	country_name VARCHAR(60),
 	fleet_size INT,
 	STATUS VARCHAR(7),
 	TYPE VARCHAR(20),
@@ -102,13 +100,14 @@ airline = """
 
 airplane = """
 	airplane_id INT NOT NULL AUTO_INCREMENT,
-	registration_number VARCHAR(10),
-	production_line VARCHAR(80),
 	iata_type VARCHAR(10),
-	model_name VARCHAR(10),
-	model_code VARCHAR(10),
+	iata_code_short VARCHAR(80),
+	construction_number VARCHAR(10),
+	delivery_date VARCHAR(10),
+	engines_count VARCHAR(10),
+	engines_type VARCHAR(10),
+	first_flight_date DATE,
 	icao_code_hex VARCHAR(10),
-	iata_code_short VARCHAR(10),
 	PRIMARY KEY (airplane_id)
 """
 
@@ -158,11 +157,13 @@ tables = {
 create_table(tables)
 
 # populate date dimension table
-date_dim = """
+create_date_temp = """
     CREATE TABLE date_temp (
         datum DATE NOT NULL
-    )
+    );
+	"""
 
+insert_date_temp = """
     INSERT INTO date_temp
     WITH RECURSIVE date_range AS (
         SELECT '2020-01-01' as datum
@@ -172,7 +173,9 @@ date_dim = """
         WHERE datum < '2021-12-31')
     SELECT datum
     FROM date_range;
+	"""
 
+insert_date = """
     INSERT INTO date(date, year, month, month_name, day, weekday_name, calendar_week, quarter)
     SELECT
         datum as date,
@@ -184,8 +187,21 @@ date_dim = """
         EXTRACT(week FROM datum) as calendar_week,
         QUARTER(datum) as quarter
     FROM date_temp;
+	"""
 
+drop_date_temp = """
     DROP TABLE date_temp;
-"""
+	"""
 
-engine.execute(date_dim)
+def insert_date_table(queries):
+    for query in queries:
+        engine.execute(query)
+
+queries = [
+	create_date_temp,
+	insert_date_temp,
+	insert_date,
+	drop_date_temp
+]
+
+insert_date_table(queries)
