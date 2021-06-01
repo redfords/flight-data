@@ -24,4 +24,4 @@ Dimension tables:
 Fact tables:
 `flights`
 
-![Model](https://i.imgur.com/S1UiCAU.jpeg)
+![Model](https://i.imgur.com/T9YPHBv.jpg)
