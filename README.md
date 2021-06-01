@@ -24,4 +24,17 @@ Dimension tables:
 Fact tables:
 `flights`
 
-![Model](https://i.imgur.com/S1UiCAU.jpeg)
+![Model](https://i.imgur.com/gK35KGi.jpg)
+
+## ETL Flow
+
+General overview:
+
+- Flight data is extracted from Aviationstack API and stored in a .csv file.
+- Airport, airline and airplane date is extracted and stored in .csv files.
+- All files are transformed then loaded into the database.
+- The data analysis queries are executed and saved into a single .xlsx file.
+
+DAG graph view:
+
+![Dag](https://i.imgur.com/hTIzWtl.jpg)
