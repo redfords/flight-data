@@ -27,7 +27,7 @@ def convert_datetime(data, column):
     data[column] = pd.to_datetime(data[column])
 
 # extract real time flights data
-access_key = "510c0e5f6d29bf5e1701266de1280e06"
+access_key = "bf3848f598ed4c4dfd554b391fc444b1"
 
 url = "http://api.aviationstack.com/v1/flights?limit=100&access_key=" + access_key
 response = requests.get(url)
