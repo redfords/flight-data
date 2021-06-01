@@ -24,7 +24,7 @@ Dimension tables:
 Fact tables:
 `flights`
 
-![Model](https://i.imgur.com/T9YPHBv.jpg)
+![Model](https://i.imgur.com/gK35KGi.jpg)
 
 ## ETL Flow
 
