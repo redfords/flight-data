@@ -17,8 +17,10 @@ def sql_queries():
 	# queries to execute
 	# flights by airline and status (active, scheduled or cancelled)
 	flight_status = """
-	SELECT airline_name, flight_status, COUNT(flight_id) AS flights
+	SELECT airline_name, flight_status, COUNT(flight_id) AS num_of_flights
 	FROM flights
+	INNER JOIN airline
+	ON airline.icao_code = flights.airline_icao
 	GROUP BY airline_name, flight_status
 	ORDER BY COUNT(flight_id) DESC, airline_name
 	"""
@@ -50,6 +52,8 @@ def sql_queries():
 	multiple_flights = """
 	SELECT airline_name, COUNT(flight_id) AS number_of_flights
 	FROM flights
+	INNER JOIN airline
+	ON airline.icao_code = flights.airline_icao
 	WHERE DATE_FORMAT(flight_date,'%%Y-%%m') = date_format(NOW(),'%%Y-%%m')
 	GROUP BY airline_name
 	HAVING COUNT(flight_id) > 1
@@ -108,6 +112,8 @@ def sql_queries():
 				COUNT(flight_id) over (
 					PARTITION BY DATE_FORMAT(flight_date,'%%Y-%%m'), airline_name) total_flights
 			FROM flights
+			INNER JOIN airline
+			ON airline.icao_code = flights.airline_icao
 			WHERE flight_status = 'cancelled') total ) ranking
 	WHERE row_num <= 10
 	"""
