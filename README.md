@@ -37,4 +37,4 @@ General overview:
 
 DAG graph view:
 
-![Dag](https://i.imgur.com/dlvh6RJ.jpg)
+![Dag](https://i.imgur.com/hTIzWtl.jpg)
